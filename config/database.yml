@@ -1,0 +1,24 @@
+
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  username: postgres
+  # For details on connection pooling, see Rails configuration guide
+  # http://guides.rubyonrails.org/configuring.html#database-pooling
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+
+development:
+  <<: *default
+  database: wishlist_dev
+
+  
+test:
+  <<: *default
+  database: wishlist_test
+
+
+production:
+  <<: *default
+  database: wishlist_production
+  username: ktplatform
+  password: <%= ENV['KTPLATFORM_DATABASE_PASSWORD'] %>
