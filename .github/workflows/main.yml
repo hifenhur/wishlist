@@ -53,4 +53,4 @@ jobs:
         PGPASSWORD: postgres
         RAILS_ENV: test
       run: |
-        bundle exec rspec
+        bundle exec rspec --color
