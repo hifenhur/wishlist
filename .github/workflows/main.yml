@@ -101,6 +101,7 @@ jobs:
           PG_HOST: localhost
           PG_USER: wishlist
         run: |
-          bin/rails db:setup
+          bin/rake db:create
+          bin/rake db:migrate
       - name: Run tests
         run: bin/rspec
