@@ -1,14 +1,13 @@
 # WISHLIST
 API feita pra criação de clientes e de suas listas de desejos
 
-* Versão ruby
-    ruby '2.6.5'
-* Criação do banco de dados
-    rake db:create
-* Inicialização do banco de dados
-    rake db:migrate
-* Como rodar os testes
-    rspec
+**Versão ruby** : ruby '2.6.5'
+
+**Criação do banco de dados**: rake db:create
+
+**Inicialização do banco de dados**: rake db:migrate
+
+**Como rodar os testes**: rspec
 
 
 # Autenticação
