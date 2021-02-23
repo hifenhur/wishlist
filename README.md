@@ -1,13 +1,13 @@
 # WISHLIST
 API feita pra criação de clientes e de suas listas de desejos
 
-* Ruby version
+* Versão ruby
     ruby '2.6.5'
-* Database creation
+* Criação do banco de dados
     rake db:create
-* Database initialization
+* Inicialização do banco de dados
     rake db:migrate
-* How to run the test suite
+* Como rodar os testes
     rspec
 
 
@@ -17,11 +17,11 @@ Usado para requisitar o token de um usuário registrado
 
 **URL** : `/api/login/`
 
-**Method** : `POST`
+**Método** : `POST`
 
-**Auth required** : NO
+**Necessita autenticação** : Não
 
-**Data constraints**
+**Dados necessários**
 
 ```json
 {
@@ -32,9 +32,9 @@ Usado para requisitar o token de um usuário registrado
 
 ## Success Response
 
-**Code** : `200 OK`
+**Código** : `200 OK`
 
-**Content example**
+**Conteudo de exemplo**
 
 ```json
 {
@@ -42,13 +42,13 @@ Usado para requisitar o token de um usuário registrado
 }
 ```
 
-## Error Response
+## Resposta de erro
 
-**Condition** : Se a autenticação falhar.
+**Condição** : Se a autenticação falhar.
 
-**Code** : `400 BAD REQUEST`
+**Código** : `400 BAD REQUEST`
 
-**Content** :
+**Conteudo** :
 
 ```json
 {
@@ -59,15 +59,15 @@ Usado para requisitar o token de um usuário registrado
 ```
 
 
-# Create Client
+# Criar cliente
 
 **URL** : `/api/clients/`
 
-**Method** : `POST`
+**Método** : `POST`
 
-**Auth required** : YES
+**Necessita autenticação** : Sim
 
-**Data constraints**
+**Dados necessários**
 
 ```json
 {
@@ -80,11 +80,11 @@ Usado para requisitar o token de um usuário registrado
 
 **URL** : `/api/clients/{client_id}`
 
-**Method** : `PUT`
+**Método** : `PUT`
 
-**Auth required** : YES
+**Necessita autenticação** : Sim
 
-**Data constraints**
+**Dados necessários**
 
 ```json
 {
@@ -97,14 +97,14 @@ Usado para requisitar o token de um usuário registrado
 
 **URL** : `/api/clients/{client_id}`
 
-**Method** : `GET`
+**Método** : `GET`
 
-**Auth required** : YES
+**Necessita autenticação** : Sim
 
 # Delete Client
 
 **URL** : `/api/clients/{client_id}`
 
-**Method** : `DELETE`
+**Método** : `DELETE`
 
-**Auth required** : YES
+**Necessita autenticação** : Sim
