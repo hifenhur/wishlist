@@ -11,9 +11,16 @@ API feita pra criação de clientes e de suas listas de desejos
     rspec
 
 
-# Login
+# Autenticação
 
-Usado para requisitar o token de um usuário registrado
+Usado para requisitar o token de um usuário registrado, existe um seed com um usuário já criado 
+
+```json
+{
+    "username": "admin",
+    "password": "password"
+}
+```
 
 **URL** : `/api/login/`
 
@@ -76,7 +83,7 @@ Usado para requisitar o token de um usuário registrado
 }
 ```
 
-# Update Client
+# Atualizar Cliente
 
 **URL** : `/api/clients/{client_id}`
 
@@ -93,7 +100,7 @@ Usado para requisitar o token de um usuário registrado
 }
 ```
 
-# Show Client
+# Visualizar Cliente
 
 **URL** : `/api/clients/{client_id}`
 
@@ -101,7 +108,7 @@ Usado para requisitar o token de um usuário registrado
 
 **Necessita autenticação** : Sim
 
-# Delete Client
+# Deletar Cliente
 
 **URL** : `/api/clients/{client_id}`
 
