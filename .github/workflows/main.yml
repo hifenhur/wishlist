@@ -2,9 +2,9 @@ on:
   push:
     branches: [ main]
   pull_request:
-    branches: [ main ]jobs:
+    branches: [ main ]
   build:
-    runs-on: ubuntu-latestservices:
+    runs-on: ubuntu-latest
       postgres:
         image: postgres:12
         ports: ["5432:5432"]
