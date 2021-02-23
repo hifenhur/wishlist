@@ -115,3 +115,19 @@ Usado para requisitar o token de um usuário registrado, existe um seed com um u
 **Método** : `DELETE`
 
 **Necessita autenticação** : Sim
+
+# Adicionar produto a lista de desejos
+
+**URL** : `/api/clients/{client_id}/wishlist_products/{product_id}`
+
+**Método** : `POST`
+
+**Necessita autenticação** : Sim
+
+# Lista de desejos
+
+**URL** : `/api/clients/{client_id}/wishlist`
+
+**Método** : `GET`
+
+**Necessita autenticação** : Sim
