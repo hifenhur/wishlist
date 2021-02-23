@@ -1,4 +1,4 @@
-# README
+# WISHLIST
 API feita pra criação de clientes e de suas listas de desejos
 
 * Ruby version
@@ -30,15 +30,6 @@ Usado para requisitar o token de um usuário registrado
 }
 ```
 
-**Data example**
-
-```json
-{
-    "username": "iloveauth@example.com",
-    "password": "abcd1234"
-}
-```
-
 ## Success Response
 
 **Code** : `200 OK`
@@ -66,3 +57,54 @@ Usado para requisitar o token de um usuário registrado
     ]
 }
 ```
+
+
+# Create Client
+
+**URL** : `/api/clients/`
+
+**Method** : `POST`
+
+**Auth required** : YES
+
+**Data constraints**
+
+```json
+{
+    "name": "[client name]",
+    "email": "[client email]"
+}
+```
+
+# Update Client
+
+**URL** : `/api/clients/{client_id}`
+
+**Method** : `PUT`
+
+**Auth required** : YES
+
+**Data constraints**
+
+```json
+{
+    "name": "[client name]",
+    "email": "[client email]"
+}
+```
+
+# Show Client
+
+**URL** : `/api/clients/{client_id}`
+
+**Method** : `GET`
+
+**Auth required** : YES
+
+# Delete Client
+
+**URL** : `/api/clients/{client_id}`
+
+**Method** : `DELETE`
+
+**Auth required** : YES
