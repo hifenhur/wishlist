@@ -10,7 +10,7 @@ API feita pra criação de clientes e de suas listas de desejos
 **Como rodar os testes**: rspec
 
 
-# Autenticação
+## Autenticação
 
 Usado para requisitar o token de um usuário registrado, existe um seed com um usuário já criado 
 
@@ -36,7 +36,7 @@ Usado para requisitar o token de um usuário registrado, existe um seed com um u
 }
 ```
 
-## Success Response
+### Success Response
 
 **Código** : `200 OK`
 
@@ -48,7 +48,7 @@ Usado para requisitar o token de um usuário registrado, existe um seed com um u
 }
 ```
 
-## Resposta de erro
+### Resposta de erro
 
 **Condição** : Se a autenticação falhar.
 
@@ -65,7 +65,7 @@ Usado para requisitar o token de um usuário registrado, existe um seed com um u
 ```
 
 
-# Criar cliente
+## Criar cliente
 
 **URL** : `/api/clients/`
 
@@ -82,7 +82,7 @@ Usado para requisitar o token de um usuário registrado, existe um seed com um u
 }
 ```
 
-# Atualizar Cliente
+## Atualizar Cliente
 
 **URL** : `/api/clients/{client_id}`
 
@@ -99,7 +99,7 @@ Usado para requisitar o token de um usuário registrado, existe um seed com um u
 }
 ```
 
-# Visualizar Cliente
+## Visualizar Cliente
 
 **URL** : `/api/clients/{client_id}`
 
@@ -107,7 +107,7 @@ Usado para requisitar o token de um usuário registrado, existe um seed com um u
 
 **Necessita autenticação** : Sim
 
-# Deletar Cliente
+## Deletar Cliente
 
 **URL** : `/api/clients/{client_id}`
 
@@ -115,7 +115,7 @@ Usado para requisitar o token de um usuário registrado, existe um seed com um u
 
 **Necessita autenticação** : Sim
 
-# Adicionar produto a lista de desejos
+## Adicionar produto a lista de desejos
 
 **URL** : `/api/clients/{client_id}/wishlist_products/{product_id}`
 
@@ -123,7 +123,7 @@ Usado para requisitar o token de um usuário registrado, existe um seed com um u
 
 **Necessita autenticação** : Sim
 
-# Lista de desejos
+## Lista de desejos
 
 **URL** : `/api/clients/{client_id}/wishlist`
 
