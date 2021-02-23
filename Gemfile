@@ -29,7 +29,6 @@ end
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 group :test do
-  gem 'cucumber-rails', require: false
   # database_cleaner is not mandatory, but highly recommended
   gem 'rspec-rails', '~> 4.0.2'
   gem 'database_cleaner'
