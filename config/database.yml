@@ -2,13 +2,12 @@
 default: &default
   adapter: postgresql
   encoding: unicode
+  username: <%= ENV.fetch("PG_USER") { 'postgres' } %>
+  password: <%= ENV.fetch("PG_PASSWORD") { nil } %>
+  host: <%= ENV.fetch("PG_HOST") { 'localhost' } %>
   # For details on connection pooling, see Rails configuration guide
   # http://guides.rubyonrails.org/configuring.html#database-pooling
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
-  username: <%= ENV.fetch("PG_USER") { 'postgres' } %>
-  password: <%= ENV.fetch("PG_PASSWORD") { '' } %>
-  password: <%= ENV.fetch("PG_HOST") { 'localhost' } %>
-  
 
 development:
   <<: *default
@@ -17,11 +16,11 @@ development:
   
 test:
   <<: *default
-  password: <%= ENV.fetch("PG_DATABASE") { 'wishlist_test' } %>
+  database: wishlist_test
 
 
 production:
   <<: *default
   database: wishlist_production
-  username: wishlist
-  password: <%= ENV['WISHLIST_DATABASE_PASSWORD'] %>
+  username: ktplatform
+  password: <%= ENV['KTPLATFORM_DATABASE_PASSWORD'] %>
