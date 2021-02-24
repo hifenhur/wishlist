@@ -23,6 +23,6 @@
 #
 class WishlistProductSerializer
     include JSONAPI::Serializer
-    attributes :id, :brand, :image, :price, :title
+    attributes :id, :brand, :image, :price, :title, :review_score
 end
   
