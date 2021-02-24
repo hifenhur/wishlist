@@ -25,7 +25,6 @@ class Api::ClientsController < ApplicationController
     else
       render status: 400
     end
-
   end
 
   def show

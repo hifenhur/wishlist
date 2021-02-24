@@ -7,7 +7,7 @@ RSpec.describe "Wishlist API", type: :request do
 		return {"Authorization": "Bearer #{auth_token}"}
 	end
 
-	context "add product to client" do
+	context "add product to client wishlist" do
         let(:client_id){Client.create(name: "João", email: "joao@gmail.com").id}
 		let(:invalid_product_id){
 			"invalid_key"
@@ -41,6 +41,28 @@ RSpec.describe "Wishlist API", type: :request do
 		end
 	end
 
+	context "delete product from client wishlist" do
+        let(:client_id){Client.create(name: "João", email: "joao@gmail.com").id}
+		let(:valid_product_id){
+			response = HTTParty.get("http://challenge-api.luizalabs.com/api/product/?page=1")
+			JSON.parse(response.body)["products"][0]["id"]
+		}
+
+		it "product is removed" do
+			client = Client.find(client_id)
+			product = client.product_from_api(valid_product_id)
+			product.save
+			
+
+			delete "/api/clients/#{client_id}/wishlist_products/#{valid_product_id}", headers: headers
+			
+			expect(response.status).to eq(200)
+			expect(client.wishlist_products.where(api_product_id: valid_product_id).count).to be(0)
+		end
+
+		
+	end
+
 	context "list whishlist for client" do
         let(:client_id){Client.create(name: "João", email: "joao@gmail.com").id}
 
@@ -61,8 +83,6 @@ RSpec.describe "Wishlist API", type: :request do
 			
 			expect(wishlist["data"].count).to eq(2)
 		end
-
-		
 	end
 
 	

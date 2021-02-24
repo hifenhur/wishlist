@@ -5,6 +5,7 @@ Rails.application.routes.draw do
     
     resources :clients, except: :index do
       post '/wishlist_products/:product_id', to: "wishlist_products#create"
+      delete '/wishlist_products/:product_id', to: "wishlist_products#destroy"
       get '/wishlist', to: 'wishlist#index'
     end
   end
