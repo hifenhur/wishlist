@@ -1,7 +1,10 @@
 # WISHLIST
 API feita pra criação de clientes e de suas listas de desejos
 
+
 **Versão ruby** : ruby '2.6.5'
+
+**Banco de dados** : postgresql
 
 **Criação do banco de dados**: rake db:create
 
